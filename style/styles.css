@@ -1,0 +1,125 @@
+body {
+    background-color: #017f01;
+    margin: 0;
+}
+
+/* top */
+
+.header {
+    width: calc(100% - 2 * 2px);
+    min-height: 60px;
+    background-color: #7F7F01;
+    border: 2px solid #000;
+    margin-bottom: 20px;
+}
+
+/* content */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-basis: 60%;
+}
+
+.inner_right {
+    display: flex;
+    flex-basis: 40%;
+    justify-content: flex-end;
+}
+
+.content {
+    transition-duration: 0.4s;
+    width: 200px;
+    height: 500px;
+    margin: 30px;
+    padding: 20px;
+    text-align: center;
+    font-family: "arial";
+    font-size: 3em;
+    background-color: #FFF;
+    border: 2px solid #000;
+}
+
+.inner_left {
+    display: flex;
+    align-items: center;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    height: 220px;
+}
+
+.inner_middle {
+    display: flex;
+    align-self: flex-start;
+}
+
+.inner_middle > * {
+    margin: 10px;
+}
+
+.inner_middle_left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* shapes */
+
+.small_rect {
+    width: 120px;
+    height: 20px;
+    background-color: #0000FF;
+    border: 2px solid #000;
+}
+
+.rect {
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    border: 2px solid #000;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #008080;
+    border: 2px solid #000;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 900px) {
+
+    .wrapper {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .content {
+        background-color: #C83737;
+    }
+}
+
+@media only screen and (max-width: 583px) {
+    .container {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .inner_right{
+        justify-content: flex-start;
+    }
+
+    .content {
+        background-color: #0000FF;
+    }
+}
